@@ -1,5 +1,4 @@
 <?php
-namespace Mozhuilungdsuo\Impersonator\database\migrations;
 
 
 
