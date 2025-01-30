@@ -5,7 +5,7 @@ namespace Mozhuilungdsuo\Impersonator;
 
 
 use Illuminate\Support\ServiceProvider;
-use Mozhuilungdsuo\Impersonator\ImpersonationBladeDirectives;
+use Mozhuilungdsuo\Impersonator\Blade\ImpersonationBladeDirectives;
 use Mozhuilungdsuo\Impersonator\ImpersonationService;
 
 class ImpersonateServiceProvider extends ServiceProvider
