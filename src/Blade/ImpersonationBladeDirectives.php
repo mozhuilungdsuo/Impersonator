@@ -9,7 +9,7 @@ class ImpersonationBladeDirectives
     public static function register()
     {
         Blade::directive('impersonateButton', function ($userId) {
-            return "<?php echo view('impersonate::button', ['userId' => $userId])->render(); ?>";
+            return "<?php echo view('impersonate', ['userId' => $userId])->render(); ?>";
         });
     }
 }
