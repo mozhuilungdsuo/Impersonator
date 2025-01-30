@@ -1,4 +1,5 @@
-php artisan vendor:publish --provider="YourVendor\Impersonate\ImpersonateServiceProvider"
+php artisan vendor:publish --provider="mozhuilungdsuo\Impersonator\ImpersonateServiceProvider"
+php artisan ven
 
 @impersonateButton($userId)
 

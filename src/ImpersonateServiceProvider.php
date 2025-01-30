@@ -25,7 +25,7 @@ class ImpersonateServiceProvider extends ServiceProvider
         // Publish migrations
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../database/migrations' => database_path('migrations'),
+                __DIR__ . '/database/migrations' => database_path('migrations'),
             ], 'impersonate-migrations');
         }
 
