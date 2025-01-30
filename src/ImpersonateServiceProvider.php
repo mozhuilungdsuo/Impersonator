@@ -18,6 +18,9 @@ class ImpersonateServiceProvider extends ServiceProvider
 
         // Load views
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'impersonate');
+        $this->publishes([
+            __DIR__ . '/../resources/views' => resource_path('views/vendor/impersonate'),
+        ], 'impersonate-views');
 
         // Register blade directives
         ImpersonationBladeDirectives::register();
