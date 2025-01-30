@@ -2,13 +2,13 @@
 namespace Mozhuilungdsuo\Impersonator\database\migrations;
 
 
-// src/database/migrations/2023_10_01_000000_create_impersonation_logs_table.php
+
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateImpersonationLogTable extends Migration
+class CreateImpersonationLogsTable extends Migration
 {
     public function up()
     {
