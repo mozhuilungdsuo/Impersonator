@@ -7,6 +7,7 @@ namespace Mozhuilungdsuo\Impersonator;
 use Illuminate\Support\ServiceProvider;
 use Mozhuilungdsuo\Impersonator\Blade\ImpersonationBladeDirectives;
 use Mozhuilungdsuo\Impersonator\ImpersonationService;
+use Illuminate\Support\Facades\Blade;
 
 class ImpersonateServiceProvider extends ServiceProvider
 {
