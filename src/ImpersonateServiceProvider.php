@@ -30,9 +30,11 @@ class ImpersonateServiceProvider extends ServiceProvider
             $this->publishes([
                 __DIR__ . '/database/migrations' => database_path('migrations'),
             ], 'impersonate-migrations');
+            // Publish config file
+            $this->publishes([
+                __DIR__ . '/../config/impersonate.php' => config_path('impersonate.php'),
+            ], 'impersonate-config');
         }
-
-      
     }
 
     public function register()
