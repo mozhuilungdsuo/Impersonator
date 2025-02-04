@@ -32,7 +32,7 @@ class ImpersonateServiceProvider extends ServiceProvider
             ], 'impersonate-migrations');
         }
 
-        Blade::component('impersonate::stop-impersonate', 'stop-impersonation-button');
+      
     }
 
     public function register()

@@ -11,5 +11,8 @@ class ImpersonationBladeDirectives
         Blade::directive('impersonateButton', function ($userId) {
             return "<?php echo view('impersonate::impersonate', ['userId' => $userId])->render(); ?>";
         });
+        Blade::directive('stopImpersonationButton', function () {
+            return "<?php echo view('impersonate::stop-impersonate')->render(); ?>";
+        });
     }
 }
