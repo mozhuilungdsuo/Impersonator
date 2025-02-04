@@ -1,16 +1,28 @@
 <?php
+
 namespace Mozhuilungdsuo\Impersonator\Controllers;
+
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 use Mozhuilungdsuo\Impersonator\Models\ImpersonationLog;
 use App\Models\User;
+use Illuminate\Support\Facades\Config;
 
 class ImpersonationController extends Controller
 {
     public function impersonateUser($id)
     {
+        $allowed_emails=Config::get('impersonate.allowed_emails');
+        if(!in_array(Auth::user()->email,$allowed_emails)){
+            return redirect()->back()->with('error', 'You are not allowed to impersonate.');
+        }
+        $restricted_emails=Config::get('impersonate.restricted_emails');
+        if(in_array(Auth::user()->email,$restricted_emails)){
+            return redirect()->back()->with('error', 'This user is restricted to impersonate.');
+        }
         $current_user = Auth::user();
+
         $user = User::find($id);
 
         if (!$user) {
@@ -39,9 +51,7 @@ class ImpersonationController extends Controller
 
     public function stopImpersonating()
     {
-        // if (!session()->has('impersonator')) {
-        //     return redirect()->route('dashboard')->with('error', 'No impersonation session found.');
-        // }
+
 
         $current_user = Auth::user();
         $impersonator_id = session()->get('impersonator');
