@@ -39,9 +39,9 @@ class ImpersonationController extends Controller
 
     public function stopImpersonating()
     {
-        if (!session()->has('impersonator')) {
-            return redirect()->route('dashboard')->with('error', 'No impersonation session found.');
-        }
+        // if (!session()->has('impersonator')) {
+        //     return redirect()->route('dashboard')->with('error', 'No impersonation session found.');
+        // }
 
         $current_user = Auth::user();
         $impersonator_id = session()->get('impersonator');
