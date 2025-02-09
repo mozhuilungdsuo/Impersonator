@@ -17,10 +17,10 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Allowed Emails for Impersonation
+    | Allowed Emails for impersonating other users
     |--------------------------------------------------------------------------
     |
-    | Define the emails that are allowed to be impersonated.
+    | Define the emails that are allowed to impersonate other users.
     | Example: ['user@example.com', 'test@example.com']
     |
     */
