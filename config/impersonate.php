@@ -1,6 +1,18 @@
 <?php
 
 return [
+    
+
+    /*
+    |--------------------------------------------------------------------------
+    | Impersonation Enabled
+    |--------------------------------------------------------------------------
+    |
+    | This option controls whether impersonation is enabled.
+    | Set to true to allow users to impersonate other users.
+    |
+    */
+    'enabled' => false,
 
 
     /*

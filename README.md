@@ -23,10 +23,11 @@ php artisan migrate
 ```
 
 ## Configuration
-After publishing, a configuration file named `impersonate.php` will be created in the `config` directory. You can use this file to define allowed and restricted email addresses for impersonation.
+After publishing, a configuration file named `impersonate.php` will be created in the `config` directory. You can use this file to define allowed and restricted email addresses for impersonation. Also enable or disable the impersonation feature.
 
 ```php
 return [
+    'enabled' => false,
     'allowed_emails' => [
         'admin@example.com',
     ],
